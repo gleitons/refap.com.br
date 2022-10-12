@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.corpoI {
+    width: 70%;
+    margin: auto;
+}
+.imagemRefap img{
+   %;
+
+}
+.dFlex {
+    display: flex;
+}

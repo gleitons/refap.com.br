@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css.css">
+    <title>Processo Seletivo</title>
+</head>
+<body>
+    <main>
+        <div class="corpoI">
+            <div class="imagemRefap">
+                <img src="https://petrobras.com.br/data/files/BE/62/73/D1/61512410F34FA0246970E6A8/Refap1-Dig39300.jpg" alt="">
+                <img src="https://images02.brasildefato.com.br/678b76049bfdd5fcbb0fad767a2b0435.jpeg" alt="">
+            </div>
+            <div class="dFlex">
+                <div>
+                    <h3>Informações gerais</h3>
+                    <p>
+                        A Refinaria Alberto Pasqualini está instalada em uma área de 580 hectares no município gaúcho de Canoas-RS, onde antes se situava a Fazenda da Brigadeira. Processa 32 mil m³/dia e atende principalmente ao mercado regional, com foco na maximização da produção de óleo diesel. A partir de 2001, foi constituída como Alberto Pasqualini – Refap SA, sendo reintegrada, em agosto de 2012, à Petrobras.
+                    </p>
+                </div>
+                <div>
+                    <h4>Endereço:</h4>
+                    <p>Avenida Getúlio Vargas, 11001 - Bairro Brigadeira</p>
+                    <p>Canoas - RS - Brasil</p>
+                    <p>CEP: 92420-221</p>
+                    <h3>Telefone:</h3>
+                    <p>(51) 3415-2000</p>
+                </div>
+            </div>
+        </div>
+        <div id="red">
+            <h1>REDIRECIONANDO</h1>
+        </div>
+        <img src="/loading-load.gif" alt="">
+
+        <script>
+
+
+            function one(){
+                document.querySelector('#red').innerHTML = `<h1>REDIRECIONANDO.</h1>`;
+            }
+            function two(){
+                document.querySelector('#red').innerHTML = `<h1>REDIRECIONANDO..</h1>`;
+            }
+            function tre(){
+                document.querySelector('#red').innerHTML = `<h1>REDIRECIONANDO...</h1>`;
+                
+            }
+            function loading() {
+            setInterval(one, 1000);
+            setInterval(two, 2000);
+            setInterval(tre, 3000);
+            }
+            
+            function carrega() {
+                loading()
+            } 
+            carrega()
+            function redireciona() {
+                document.location.href = "https://gleiton.com.br"
+            }
+            setInterval(redireciona, 9000)
+        </script>
+        <!-- <script>
+            
+        </script> -->
+    </main>
+</body>
+</html>
