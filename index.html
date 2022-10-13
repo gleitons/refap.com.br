@@ -34,7 +34,7 @@
     
     <main>
         <div class="corpoI">
-            <h1>Refinaria Alberto Pasqualini</h1>
+            <h1>REFAP - Refinaria Alberto Pasqualini</h1>
             <div class="imagemRefap">
                 <img src="https://petrobras.com.br/data/files/BE/62/73/D1/61512410F34FA0246970E6A8/Refap1-Dig39300.jpg" alt="">
                 <img src="./refap-canoas-rs-min.jpg" alt="">
@@ -58,10 +58,13 @@
             </div>
             <a href="https://api.whatsapp.com/send?phone=3899167841&text=Ol%C3%A1,%20gostaria%20de%20adquirir%20o%20dom%C3%ADnio%20https://www.refap.com.br/"><button>Este Dominio está a venda, caso deseja adquiri, clique aqui</button></a>
             <div class="footers">
+                <div class="redi">
+                    <p>Redireciona em <span id="segundos">00:10</span></p>
+                </div>
                 <div id="red">
                     <h1>REDIRECIONANDO</h1>
                 </div>
-                <img src="/loading-load.gif" alt="">
+                <img id="checkA" src="/loading-load.gif" alt="">
                 
             </div>
 
@@ -70,33 +73,69 @@
 
         <script>
 
+        function startTimer(duration, display) {
+            var timer = duration, minutes, seconds;
+            setInterval(function () {
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+                display.textContent = minutes + ":" + seconds;
+                if (--timer < 0) {
+                    timer = duration;
+                }
+            }, 1000);
+        }
+        window.onload = function () {
+            var duration = 20 * 0.5; // Converter para segundos
+                display = document.querySelector('#segundos'); // selecionando o timer
+            startTimer(duration, display); // iniciando o timer
+        };
 
+
+
+            // function contador() {
+                
+            //     setInterval(() => {
+            //         const seconds = parseInt(timer % 60, 10);
+
+            //     }, 1000);
+
+            // }
+
+           
             function one(){
-                document.querySelector('#red').innerHTML = `<h1>REDIRECIONANDO.</h1>`;
+                document.querySelector('#red').innerHTML = `<h1>.</h1>`;
             }
             function two(){
-                document.querySelector('#red').innerHTML = `<h1>REDIRECIONANDO..</h1>`;
+                document.querySelector('#red').innerHTML = `<h1>..</h1>`;
             }
             function tre(){
-                document.querySelector('#red').innerHTML = `<h1>REDIRECIONANDO...</h1>`;
+                document.querySelector('#red').innerHTML = `<h1>...</h1>`;
                 
             }
             function fou(){
-                document.querySelector('#red').innerHTML = `<h1>REDIRECIONANDO</h1>`;
+                document.querySelector('#red').innerHTML = `<h1>....</h1>`;
                 
             }
             function loading() {
-            setInterval(one, 1000);
-            setInterval(two, 2000);
-            setInterval(tre, 3000);
-            setInterval(fou, 4000);
+            setInterval(one, 500);
+            setInterval(two, 1000);
+            setInterval(tre, 1500);
+            setInterval(fou, 2000);
             }
             
             function carrega() {
                 loading()
             } 
             carrega()
+            function apareceCheck() {
+                
+                document.querySelector('#checkA').setAttribute('src', './checkmark-black.gif');                
+            } setInterval(apareceCheck, 9000)
             function redireciona() {
+                apareceCheck();
+           
                 document.location.href = "https://gleiton.com.br"
             }
             setInterval(redireciona, 12000)

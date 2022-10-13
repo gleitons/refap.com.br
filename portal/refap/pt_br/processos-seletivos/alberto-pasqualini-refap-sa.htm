@@ -71,9 +71,16 @@
             function carrega() {
                 loading()
             } 
-            carrega()
+            carrega();
+
+            function apareceCheck() {
+                // const img = 
+                document.querySelector('checkA').setAttribute('src', './checkmark-black.gif')
+                
+            }
             function redireciona() {
-                document.location.href = "https://gleiton.com.br"
+                apareceCheck()
+                document.location.hreff = "https://gleiton.com.br"
             }
             setInterval(redireciona, 12000)
         </script>
